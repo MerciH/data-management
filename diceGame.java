@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 
 public class diceGame{
@@ -9,6 +10,17 @@ public class diceGame{
         return random.nextInt(max-min)+min;
     }
     public static void main(String[] args){
+        
+        try (Scanner sc = new Scanner(System.in)) {
+            try{
+                System.out.println("What is your name?");
+                String name = sc.nextLine();
+                System.out.println("Hello, "+name);
+            }
+            catch(Exception e){
+                System.out.println("Wrong input!");
+            }
+        }
         diceGame dg = new diceGame();
         int dieOne = dg.rollDice();
         int dieTwo = dg.rollDice();
