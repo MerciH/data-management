@@ -11,16 +11,16 @@ public class diceGame{
     }
     public static void main(String[] args){
         
-        Scanner sc = new Scanner(System.in);
-        try{
-            System.out.println("What is your name?");
-            String name = sc.nextLine();
-            System.out.println("Hello, "+name);
+        try (Scanner sc = new Scanner(System.in)) {
+            try{
+                System.out.println("What is your name?");
+                String name = sc.nextLine();
+                System.out.println("Hello, "+name);
+            }
+            catch(Exception e){
+                System.out.println("Wrong input!");
+            }
         }
-        catch(Exception e){
-            System.out.println("Wrong input!");
-        }
-
         diceGame dg = new diceGame();
         int dieOne = dg.rollDice();
         int dieTwo = dg.rollDice();
