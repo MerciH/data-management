@@ -12,9 +12,13 @@ public class diceGame{
         diceGame dg = new diceGame();
         int dieOne = dg.rollDice();
         int dieTwo = dg.rollDice();
+        int sum = dieOne+dieTwo;
         System.out.println("Rolling dice...");
         System.out.println("Die 1 : "+dieOne);
         System.out.println("Die 2 : "+dieTwo);
-        System.out.println("Total Value: "+(dieOne+dieTwo));
+        System.out.println("Total Value: "+sum);
+        if (sum>7){
+            System.out.println("You won!");
+        }
     }
 }
